@@ -35,8 +35,9 @@
                 <div style=" display: grid; grid-template-columns: 1fr 1fr 1fr;  grid-column-gap: 10px;
                              grid-row-gap: 1em; padding: 14px;">
                     @foreach ($documents as $doc=>$ind )
-                        <div class="card" style="background: {{$colo[$doc]}};" >
+                        <div class="card" style="background: {{$colo[$doc]}}; display: grid; grid-template-columns: 6fr 1fr;" >
                             {{$ind}}
+                            <div style=" text-aling:center; font-size:1.6em;" >&#9745;</div>
                         </div>  
                     @endforeach
                 </div>             
