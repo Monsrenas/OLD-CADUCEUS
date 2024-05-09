@@ -25,20 +25,21 @@
 </style>
 
 <?php
-    $documents= array("HPA application for Registration", "HPA application for Licensure/Renewal", "Curriculum vitae", "Police Record");
-    $colo=array("green","green","orange", "red");
+    $documents= array("HPA application for Registration", "HPA application for Licensure/Renewal", "Curriculum vitae", "Police Record","Copy of passport");
+    $colo=array("green","green","orange", "red", "gray");
 ?>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style=" display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  grid-column-gap: 10px;
-  grid-row-gap: 1em;">
-                @foreach ($documents as $doc=>$ind )
-                    <div class="card" style="background: {{$colo[$doc]}};" >
-                        {{$ind}}
-                    </div>  
-                @endforeach             
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" >
+                <div style=" display: grid; grid-template-columns: 1fr 1fr 1fr;  grid-column-gap: 10px;
+                             grid-row-gap: 1em; padding: 14px;">
+                    @foreach ($documents as $doc=>$ind )
+                        <div class="card" style="background: {{$colo[$doc]}};" >
+                            {{$ind}}
+                        </div>  
+                    @endforeach
+                </div>             
             </div>
         </div>
     </div>
